@@ -1,71 +1,113 @@
-// Задание 1
-let q;
-q = 10;
-alert(q);
-q = 20;
-alert(q);
+// Задание 1:
 
-// Задание 2
-let firstiPhoneReleaseYear = 2007;
-alert(firstiPhoneReleaseYear);
 
-// Задание 3
-let jsCreatorName = "Brendan Eich";
-alert(jsCreatorName);
+let password = 'пароль';
+let userPassword = prompt('Введите пароль');
 
-// Задание 4
-let num1 = 10;
-let num2 = 2;
-alert(num1 + num2);
-alert(num1 - num2);
-alert(num1 * num2);
-alert(num1 / num2);
+if (userPassword === password) {
+    alert('Пароль введен верно');
+} else {
+    alert('Пароль введен неправильно');
+}
+// Задание 2:
 
-// Задание 5
-let result = Math.pow(2, 5);
-alert(result);
 
-// Задание 6
-let a = 9;
-let b = 2;
-let remainder = a % b;
-alert(remainder);
+let c = 0; // Измените значение переменной c для проверки разных случаев
 
-// Задание 7
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-num++;
-num--;
-alert(num);
+if (c > 0 && c < 10) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+// Задание 3:
 
-// Задание 8
-let age = prompt("Сколько вам лет?");
-alert(age);
 
-// Задание 9.0
-let user = {
-  name: "John",
-  age: 30,
-  isAdmin: true,
-};
+let d = 50; // Измените значение переменной d
+let e = 120; // Измените значение переменной e
 
-// Задание 9.1
-user["city of residence"] = "New York";
+if (d > 100 || e > 100) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+// Задание 4:
 
-// Задание 9.2
-user.age = 35;
 
-// Задание 9.3
-delete user["city of residence"];
+let a = '2';
+let b = '3';
 
-// Задание 9.4
-let info = prompt("Какую информацию хотите узнать о пользователе?");
-alert(user[info]);
+alert(Number(a) + Number(b));
+// Задание 5:
 
-// Задание 10
-// Так же выполнил в html файле
-let userName = prompt("Введите ваше имя:");
-alert(`Привет, ${userName}!`);
+
+let monthNumber = 12; // Измените значение переменной monthNumber
+
+switch (monthNumber) {
+    case 1:
+    case 2:
+    case 12:
+        console.log('Зима');
+        break;
+    case 3:
+    case 4:
+    case 5:
+        console.log('Весна');
+        break;
+    case 6:
+    case 7:
+    case 8:
+        console.log('Лето');
+        break;
+    case 9:
+    case 10:
+    case 11:
+        console.log('Осень');
+        break;
+    default:
+        console.log('Номер месяца больше 12');
+}
+// Задание 7:
+
+
+let userInput = prompt('Пожалуйста, введите любое число');
+let number = parseFloat(userInput);
+
+if (!isNaN(number)) {
+    if (number % 2 === 0) {
+        alert('Число четное');
+    } else {
+        alert('Число нечетное');
+    }
+} else {
+    alert('Введено не число');
+}
+// Задание 8:
+
+
+let clientOS = 0; // 0 — iOS, 1 — Android
+
+if (clientOS === 0) {
+    console.log('Установите версию приложения для iOS по ссылке');
+} else if (clientOS === 1) {
+    console.log('Установите версию приложения для Android по ссылке');
+}
+// Задание 9:
+
+
+
+let clientOS = 0; // 0 — iOS, 1 — Android
+let clientDeviceYear = 2015; // год выпуска телефона
+
+if (clientDeviceYear < 2015) {
+    if (clientOS === 0) {
+        console.log('Установите облегченную версию приложения для iOS по ссылке');
+    } else if (clientOS === 1) {
+        console.log('Установите облегченную версию приложения для Android по ссылке');
+    }
+} else {
+    if (clientOS === 0) {
+        console.log('Установите версию приложения для iOS по ссылке');
+    } else if (clientOS === 1) {
+        console.log('Установите версию приложения для Android по ссылке');
+    }
+}
