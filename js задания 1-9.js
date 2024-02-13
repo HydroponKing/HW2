@@ -5,6 +5,8 @@ alert(q);
 q = 20;
 alert(q);
 
+//
+
 // Задание 2
 let firstiPhoneReleaseYear = 2007;
 alert(firstiPhoneReleaseYear);
