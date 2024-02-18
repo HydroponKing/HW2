@@ -35,8 +35,8 @@ function greetUserAge(age) {
     else if (age <= 12) {
         console.log("привет друг");
     }
-    else if (age <= 12) {
-        console.log("добро пожаловать");
+    else {
+        console.log("Добро пожаловать!");
     }
 }
 // примерр
@@ -56,13 +56,22 @@ console.log(multiplyNum(2, 3));
 console.log(multiplyNum("a", 5));
 
 // Задача 6
-function cubeAndReturnString(num) {
-    if (typeof num === 'numbers') {
-        const result = num ** 3;
-        return `${num} в кубе равняется ${result}`;
-    } else {
-        return 'переданный параметр не является числом'
+function cubeAndReturnString() {
+    let userInput = prompt("Введите число:");
+
+    if (isNaN(userInput)) {
+        return 'Переданный параметр не является числом';
     }
+
+    let number = parseFloat(userInput);
+    let cubeResult = Math.pow(number, 3);
+
+    return `${number} в кубе равняется ${cubeResult}`;
+}
+
+// проверка функции
+for (let i = 0; i <= 10; i++) {
+    console.log(cubeAndReturnString(i));
 }
 // пример использования
 console.log(cubeAndReturn(3));// выведет : 3 в кубе = 27
