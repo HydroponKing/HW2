@@ -25,18 +25,14 @@ let result = numbers.join(' ');//пробел
 console.log(result);
 
 //Задача 4
-let multiArray = []
-let rows = 3;
-let colums = 3;
-for (let i = 0; i < rows; i++) {
-    let row = [];
-    for (let j = 0; j < colums; j++) {
-        row.push(1)
-
-    }
-    multiArray.push
+let arr = [];
+for (let i = 0; i < 3; i++) {
+  arr[i] = [];
+  for (let j = 0; j < 3; j++) {
+    arr[i][j] = 1;
+  }
 }
-console.log(multiArray);
+console.log(arr);
 
 //Задача 5 
 let myArrayTask5 = [1, 1, 1]
@@ -45,19 +41,19 @@ console.log(myArrayTask5);
 
 //Задача 6 
 let myArray = [9, 8, 7, 'a', 6, 5];
-let numericArray = myArray.filter(item => typeof item === 'number');
+let numericArray = myArray(item => typeof item === 'number');
 numericArray.sort((a, b) => a - b);
-numericArray.reverse(); //перевернул массив обратно ёмаё
 console.log(numericArray);
 
 //Задача 7 
-let numbersArray = [9, 8, 7, 6, 5];
-let userGuess = prompt("Угадайте число:");
-userGuess = parseInt(userGuess);
-if (!isNaN(userGuess) && [...numbersArray].includes(userGuess)) {
-    alert("Угадал");
+let arrT7 = [9, 8, 7, 6, 5];
+
+let userGuess = prompt("Попробуйте угадать число из массива");
+
+if (arrT7.includes(Number(userGuess))) {
+  alert("Угадал!");
 } else {
-    alert("Не угадал");
+  alert("Не угадал!");
 }
 
 //Задача 8
@@ -69,17 +65,9 @@ console.log(reversedString);
 
 //Задача 9 
 
-let nestedArray = [[1, 2, 3], [4, 5, 6]];
-let array1 = nestedArray[0];
-let array2 = nestedArray[1];
-let NewArray = array1.concat(array2);
-console.log(NewArray);
-
-//p.s. я чуть посидел над задачей, можно записать короче.
-let nestedArray2 = [[1, 2, 3], [4, 5, 6]];
-let flatArray = [].concat(...nestedArray2);
-console.log(flatArray);
-
+let arrT9 = [[1, 2, 3], [4, 5, 6]];
+let flattened = arrT9.flat();
+console.log(flattened);
 //Задача 10 
 let myArrayTask10 = [2, 1, 3, 5, 8, 9, 4, 7, 6, 10];
 
