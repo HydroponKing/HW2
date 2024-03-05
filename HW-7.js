@@ -69,7 +69,7 @@ console.log(currentDateT9.toLocaleString());
 
 //Задача 10 
 function formatDate(date) {
-    const daysOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    const daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
     const months = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
  
     const dayOfWeek = daysOfWeek[date.getDay()];
@@ -93,14 +93,21 @@ function startGame() {
     alert(fruit);
     let guessPromptFirst = prompt("чему равняется 1-ый элемент в массиве?");
     let guessPromptLast = prompt("чему равнается последний элемент в массиве?");
-    if (guessPromptFirst === fruit[0] && guessPromptLast === fruit[fruit.length - 1]) {
-       alert("поздравляем!!! вы выиграли!!!");
+
+    guessPromptFirst = guessPromptFirst ? guessPromptFirst.toLowerCase() : null;
+    guessPromptLast = guessPromptLast ? guessPromptLast.toLowerCase() : null;
+
+    if (guessPromptFirst === null || guessPromptLast === null) {
+        alert("Вы отменили ввод.");
+        return;
     }
-    else if (guessPromptFirst === fruit[0] || guessPromptLast === fruit[fruit.length - 1]) {
-       alert("вы были очень близко!!!");
-    }
-    else {
-       alert("вы проиграли ((((((");
+
+    if (guessPromptFirst === fruit[0].toLowerCase() && guessPromptLast === fruit[fruit.length - 1].toLowerCase()) {
+        alert("Поздравляем!!! Вы выиграли!!!");
+    } else if (guessPromptFirst === fruit[0].toLowerCase() || guessPromptLast === fruit[fruit.length - 1].toLowerCase()) {
+        alert("Вы были очень близко!!!");
+    } else {
+        alert("Вы проиграли ((((((");
     }
 }
  
